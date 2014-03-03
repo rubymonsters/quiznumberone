@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Sortable - Connect lists</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #sortable1, #sortable2, #sortable3, #sortable4, #sortable5 { list-style-type: none; margin: 0; padding: 0 0 2.5em; float: left; margin-right: 10px;}
+  #sortable1 li, #sortable2 li, #sortable3 li, #sortable4 li, #sortable5 li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; width: 220px; height: 50px; }
+  .dark { background-color: yellow;}
+  .light { background-color: red;}
+  </style>
+  <script>
+  $(function() {
+    $( "#sortable1, #sortable2, #sortable3 , #sortable4 , #sortable5"  ).sortable({
+      connectWith: ".connectedSortable"
+    }).disableSelection();
+  });
+  </script>
+</head>
+<body>
+
+<ul id="sortable1" class="connectedSortable">
+  <li class="ui-state-default dark">What is an expression and value at the same time:</li>
+  <li class="ui-state-default dark" >What is an expression:</li>
+  <li class="ui-state-default dark">What are value/primitive types (not objects):</li>
+  <li class="ui-state-default dark">What is a reference type:</li>
+  <li class="ui-state-default dark">What is a closure</li>
+</ul>
+
+<ul id="sortable2" class="connectedSortable">
+  <li class="ui-state-highlight light">string</li>
+  <li class="ui-state-highlight light">number</li>
+  <li class="ui-state-highlight light">string or number plus operator</li>
+  <li class="ui-state-highlight light">string</li>
+  <li class="ui-state-highlight light">number</li>
+</ul>
+
+<ul id="sortable3" class="connectedSortable">
+  <li class="ui-state-highlight">boolean</li>
+  <li class="ui-state-highlight">undefined</li>
+  <li class="ui-state-highlight">a new environment is created</li>
+  <li class="ui-state-highlight">Item 4</li>
+  <li class="ui-state-highlight">Item 5</li>
+</ul>
+<ul id="sortable4" class="connectedSortable">
+  <li class="ui-state-highlight">When a new function is invoked:</li>
+  <li class="ui-state-highlight">What is a free variable:</li>
+  <li class="ui-state-highlight"></li>
+  <li class="ui-state-highlight">function expression assigned to a variable:</li>
+  <li class="ui-state-highlight">What is a bind variable:</li>
+</ul>
+<ul id="sortable5" class="connectedSortable">
+  <li class="ui-state-highlight">variable in function statement is also an argument</li>
+  <li class="ui-state-highlight">variable in function statement is not an argument</li>
+  <li class="ui-state-highlight">a new environmnt is created</li>
+  <li class="ui-state-highlight">Item 4</li>
+  <li class="ui-state-highlight">Item 5</li>
+</ul>
+
+</body>
+</html>
