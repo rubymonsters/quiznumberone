@@ -11,7 +11,7 @@
   #sortable1, #sortable2, #sortable3, #sortable4, #sortable5 { list-style-type: none; margin: 0; padding: 0 0 2.5em; float: left; margin-right: 10px;}
   #sortable1 li, #sortable2 li, #sortable3 li, #sortable4 li, #sortable5 li { margin: 0 5px 5px 5px; padding: 5px; font-size: 1.2em; width: 220px; height: 50px; }
   .dark { background-color: yellow;}
-  .light { background-color: red;}
+  .light { background-color: lightblue;}
   </style>
   <script>
   $(function() {
@@ -24,41 +24,41 @@
 <body>
 
 <ul id="sortable1" class="connectedSortable">
-  <li class="ui-state-default dark">What is an expression and value at the same time:</li>
+  <li class="ui-state-default dark">What is closure:</li>
   <li class="ui-state-default dark" >What is an expression:</li>
   <li class="ui-state-default dark">What are value/primitive types (not objects):</li>
   <li class="ui-state-default dark">What is a reference type:</li>
-  <li class="ui-state-default dark">What is a closure</li>
+  <li class="ui-state-default dark">Variables created with var exist in which space:</li>
+  <li class="ui-state-highlight dark">Variables not created with var exist:</li>
 </ul>
 
 <ul id="sortable2" class="connectedSortable">
+  <li class="ui-state-highlight light">array</li>
+  <li class="ui-state-highlight light">function</li>
+  <li class="ui-state-highlight light">string/number plus operator</li>
   <li class="ui-state-highlight light">string</li>
-  <li class="ui-state-highlight light">number</li>
-  <li class="ui-state-highlight light">string or number plus operator</li>
-  <li class="ui-state-highlight light">string</li>
-  <li class="ui-state-highlight light">number</li>
-</ul>
 
+</ul>
 <ul id="sortable3" class="connectedSortable">
-  <li class="ui-state-highlight">boolean</li>
-  <li class="ui-state-highlight">undefined</li>
-  <li class="ui-state-highlight">a new environment is created</li>
-  <li class="ui-state-highlight">Item 4</li>
-  <li class="ui-state-highlight">Item 5</li>
+  <li class="ui-state-highlight light">boolean</li>
+  <li class="ui-state-highlight light">undefined</li>
+  <li class="ui-state-highlight light">xxxx</li>
+  <li class="ui-state-highlight light">function expression</li>
+  <li class="ui-state-highlight light">in the global namespace</li>
 </ul>
 <ul id="sortable4" class="connectedSortable">
-  <li class="ui-state-highlight">When a new function is invoked:</li>
-  <li class="ui-state-highlight">What is a free variable:</li>
-  <li class="ui-state-highlight"></li>
-  <li class="ui-state-highlight">function expression assigned to a variable:</li>
-  <li class="ui-state-highlight">What is a bind variable:</li>
+  <li class="ui-state-highlight dark">When a new function is invoked:</li>
+  <li class="ui-state-highlight dark">What is a free variable:</li>
+  <li class="ui-state-highlight light">xxxx</li>
+  <li class="ui-state-highlight dark">xxxx</li>
+  <li class="ui-state-highlight dark">What is a bind variable:</li>
 </ul>
 <ul id="sortable5" class="connectedSortable">
-  <li class="ui-state-highlight">variable in function statement is also an argument</li>
-  <li class="ui-state-highlight">variable in function statement is not an argument</li>
-  <li class="ui-state-highlight">a new environmnt is created</li>
-  <li class="ui-state-highlight">Item 4</li>
-  <li class="ui-state-highlight">Item 5</li>
+  <li class="ui-state-highlight light">variable in fn statement is also an argument</li>
+  <li class="ui-state-highlight light">variable in fn statement is not an argument</li>
+  <li class="ui-state-highlight light">a new environmnt is created</li>
+  <li class="ui-state-highlight light">a function with a free variable</li>
+  <li class="ui-state-highlight light">The space in which created</li>
 </ul>
 
 </body>
